@@ -1,0 +1,41 @@
+# =========================================================
+# Sécurité — en-têtes HTTP, HTTPS forcé, anti-listing
+# =========================================================
+
+# Empêche l'affichage du contenu des dossiers sans index
+Options -Indexes
+
+# Force HTTPS (nécessite que le certificat SSL soit actif chez l'hébergeur)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# En-têtes de sécurité
+<IfModule mod_headers.c>
+  # Empêche le navigateur de deviner un type MIME différent de celui déclaré
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Interdit l'affichage du site dans une <iframe> (anti-clickjacking)
+  Header always set X-Frame-Options "DENY"
+
+  # Limite les informations envoyées dans l'en-tête Referer
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Désactive des API navigateur non utilisées par le site
+  Header always set Permissions-Policy "geolocation=(), camera=(), microphone=()"
+
+  # HSTS : une fois HTTPS confirmé actif, force le navigateur à toujours
+  # utiliser HTTPS pour ce domaine (sans effet tant que servi en HTTP)
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+
+  # Content-Security-Policy : n'autorise que les ressources du site et
+  # les polices Google Fonts déjà utilisées par le design
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'"
+</IfModule>
+
+# Bloque toute requête directe sur les fichiers de config sensibles
+<FilesMatch "\.(json|log|md)$">
+  Require all denied
+</FilesMatch>

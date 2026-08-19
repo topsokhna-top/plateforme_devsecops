@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sokhna TOP — Transmission de Données &amp; Sécurité de l'Information</title>
+<meta name="description" content="Portfolio de Sokhna TOP, étudiante en transmission de données et sécurité de l'information, en spécialisation cybersécurité.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER / NAV ================= -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark mono">0x</span>
+      <span class="logo-text">Sokhna TOP</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#about" class="nav-link">Profil</a>
+      <a href="#skills" class="nav-link">Compétences</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
+      <a href="#projects" class="nav-link">Projets &amp; CTF</a>
+      <a href="#timeline" class="nav-link">Parcours</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème" aria-pressed="false">
+        <span class="theme-toggle-track">
+          <span class="theme-toggle-thumb"></span>
+        </span>
+      </button>
+      <button id="nav-burger" class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow mono">0x00 · identification</p>
+      <h1 class="hero-title">
+        <span class="hero-name">Sokhna TOP</span>
+        <span class="hero-role" id="hero-role" data-text="Sécurité de l'Information &amp; Transmission de Données">Transmission de données &amp; Sécurité de l'information</span>
+      </h1>
+      <p class="hero-desc">
+        Étudiante en transmission de données et sécurité de l'information,
+        je me spécialise en cybersécurité : protection des systèmes, analyse des menaces et
+        sécurisation des infrastructures réseau.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">Voir mes projets &amp; CTF</a>
+        <a href="#contact" class="btn btn-ghost">Me contacter</a>
+      </div>
+
+      <div class="hero-status mono">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span id="hero-status-text">ouverte aux stages / alternances en cybersécurité</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-label mono">0x01 · profil</p>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-title">Qui je suis</h2>
+          <p>
+            Étudiante en transmission de données et sécurité de l'information à la faculté des sciences et techniques de l'UCAD, je me spécialise en cybersécurité avec un intérêt particulier pour la sécurité réseau et l'analyse de trafic. C'est en manipulant les protocoles et en observant comment les systèmes communiquent que j'ai compris à quel point leur protection était un enjeu concret, pas juste théorique. Aujourd'hui, je complète ma formation par des CTF et des certifications pour construire une expertise solide, entre compréhension des infrastructures et détection des menaces.
+          </p>
+          <p>
+            En dehors des cours, je monte des labs personnels pour tester en conditions réelles ce que j'apprends en théorie — machines virtuelles, scénarios d'attaque/défense — parce que je retiens mieux en manipulant qu'en lisant..
+          </p>
+
+          <ul class="about-facts">
+            <li><span class="mono">localisation</span> Dakar, Senegal</li>
+            <li><span class="mono">formation</span> TDSI/UCAD</li>
+            <li><span class="mono">spécialisation</span> Cybersécurité_Sécurité des systèmes d'information</li>
+            <li><span class="mono">dispo</span> [Stage / Alternance / Projet]</li>
+          </ul>
+        </div>
+
+        <div class="about-photo reveal">
+          <div class="photo-frame">
+            <img src="assets/images/profile-placeholder.jpg" alt="Photo de profil" onerror="this.style.display='none'; this.parentElement.classList.add('photo-empty')">
+            <span class="photo-fallback mono">photo.jpg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS (scan report) ================= -->
+  <section class="section" id="skills">
+    <div class="container">
+      <p class="section-label mono">0x02 · compétences</p>
+      <div class="section-head-row reveal">
+        <h2 class="section-title">Scan de compétences</h2>
+        <div class="legend mono">
+          <span><i class="dot dot-done"></i> maîtrisé</span>
+          <span><i class="dot dot-progress"></i> en cours</span>
+          <span><i class="dot dot-planned"></i> à venir</span>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title mono">réseaux &amp; protocoles</h3>
+          <ul class="skill-list">
+            <li><span>TCP/IP, modèle OSI</span><i class="dot dot-done"></i></li>
+            <li><span>Wireshark / analyse de trafic</span><i class="dot dot-done"></i></li>
+            <li><span>[Routage &amp; VLAN]</span><i class="dot dot-progress"></i></li>
+            <li><span>[DNS / DHCP / firewalls]</span><i class="dot dot-progress"></i></li>
+          </ul>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title mono">sécurité</h3>
+          <ul class="skill-list">
+            <li><span>Bases cryptographie</span><i class="dot dot-done"></i></li>
+            <li><span>[Analyse de vulnérabilités]</span><i class="dot dot-progress"></i></li>
+            <li><span>[Pentest / OWASP Top 10]</span><i class="dot dot-progress"></i></li>
+            <li><span>[Gestion des risques / ISO 27001]</span><i class="dot dot-planned"></i></li>
+          </ul>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title mono">outils</h3>
+          <ul class="skill-list">
+            <li><span>Wireshark</span><i class="dot dot-done"></i></li>
+            <li><span>[Nmap]</span><i class="dot dot-progress"></i></li>
+            <li><span>[Burp Suite]</span><i class="dot dot-progress"></i></li>
+            <li><span>[Kali Linux]</span><i class="dot dot-progress"></i></li>
+          </ul>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title mono">scripting</h3>
+          <ul class="skill-list">
+            <li><span>Python</span><i class="dot dot-done"></i></li>
+            <li><span>[Bash]</span><i class="dot dot-progress"></i></li>
+            <li><span>SQL</span><i class="dot dot-done"></i></li>
+            <li><span>[PowerShell]</span><i class="dot dot-planned"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATIONS ================= -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <p class="section-label mono">0x03 · certifications &amp; formation</p>
+      <h2 class="section-title reveal">Progression</h2>
+
+      <div class="cert-list">
+
+        <div class="cert-row reveal">
+          <div class="cert-main">
+            <h3 class="cert-title">[Nom du diplôme / formation en cours]</h3>
+            <p class="cert-provider mono">[École / organisme] · [Année]</p>
+          </div>
+          <span class="badge badge-progress mono">en cours</span>
+        </div>
+
+        <div class="cert-row reveal">
+          <div class="cert-main">
+            <h3 class="cert-title">[Ex : CompTIA Security+]</h3>
+            <p class="cert-provider mono">[Organisme certifiant] · [Année visée]</p>
+          </div>
+          <span class="badge badge-planned mono">planifié</span>
+        </div>
+
+        <div class="cert-row reveal">
+          <div class="cert-main">
+            <h3 class="cert-title">[Ex : Introduction à la cybersécurité]</h3>
+            <p class="cert-provider mono">[Cisco / TryHackMe Academy / autre] · [Année]</p>
+          </div>
+          <span class="badge badge-done mono">obtenu</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS & CTF ================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="section-label mono">0x04 · projets &amp; ctf</p>
+      <h2 class="section-title reveal">Terrain d'entraînement</h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-tab mono">
+            <span>CASE-001</span>
+            <span class="badge badge-done mono">résolu</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">[Nom du challenge / projet 1]</h3>
+            <p class="project-desc">
+              [Remplace] Contexte du challenge, la vulnérabilité identifiée, ta démarche
+              et ce que tu as appris.
+            </p>
+            <div class="project-tags">
+              <span class="tag mono">TryHackMe</span>
+              <span class="tag mono">Réseau</span>
+              <span class="tag mono">Facile</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Lire le write-up →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-tab mono">
+            <span>CASE-002</span>
+            <span class="badge badge-done mono">résolu</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">[Nom du challenge / projet 2]</h3>
+            <p class="project-desc">
+              [Remplace] Contexte du challenge, la vulnérabilité identifiée, ta démarche
+              et ce que tu as appris.
+            </p>
+            <div class="project-tags">
+              <span class="tag mono">HackTheBox</span>
+              <span class="tag mono">Web</span>
+              <span class="tag mono">Moyen</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Lire le write-up →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-tab mono">
+            <span>CASE-003</span>
+            <span class="badge badge-progress mono">en cours</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">[Nom du projet perso — ex: lab de détection]</h3>
+            <p class="project-desc">
+              [Remplace] Décris ton projet personnel : objectif, outils utilisés,
+              état d'avancement.
+            </p>
+            <div class="project-tags">
+              <span class="tag mono">Projet perso</span>
+              <span class="tag mono">SOC</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Voir le dépôt →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TIMELINE (trace de signal) ================= -->
+  <section class="section" id="timeline">
+    <div class="container">
+      <p class="section-label mono">0x05 · parcours</p>
+      <h2 class="section-title reveal">Trace du parcours</h2>
+
+      <div class="signal-trace">
+
+        <div class="trace-entry reveal">
+          <div class="trace-meta mono">[2026]</div>
+          <div class="trace-content">
+            <h3 class="trace-title">[Formation / étape actuelle]</h3>
+            <p class="trace-desc">[Remplace] Ce que tu y fais, appris, ou construit.</p>
+          </div>
+        </div>
+
+        <div class="trace-entry reveal">
+          <div class="trace-meta mono">[2025]</div>
+          <div class="trace-content">
+            <h3 class="trace-title">[Étape précédente]</h3>
+            <p class="trace-desc">[Remplace] Ce que tu y as fait, appris, ou construit.</p>
+          </div>
+        </div>
+
+        <div class="trace-entry reveal">
+          <div class="trace-meta mono">[2024]</div>
+          <div class="trace-content">
+            <h3 class="trace-title">[Début de ton parcours]</h3>
+            <p class="trace-desc">[Remplace] Le point de départ : bac, premier intérêt pour la sécu, déclic...</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <p class="section-label mono">0x06 · contact</p>
+      <h2 class="section-title reveal">Échangeons</h2>
+      <p class="contact-intro reveal">
+        [Remplace] Une phrase d'invitation : ouverte à un stage, une alternance,
+        ou juste discuter cybersécurité.
+      </p>
+
+      <div class="contact-grid">
+        <form id="contact-form" class="contact-form reveal" action="php/contact.php" method="POST" novalidate>
+          <div class="form-row">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-row">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <!-- Anti-spam simple (honeypot) -->
+          <div class="honeypot" aria-hidden="true">
+            <label for="website">Site web</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <!-- Jeton anti-CSRF (rempli par le JS, vérifié par contact.php) -->
+          <input type="hidden" id="csrf_token" name="csrf_token" value="">
+
+          <button type="submit" class="btn btn-primary" id="submit-btn">Envoyer le message</button>
+
+          <p class="form-status mono" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-side reveal">
+          <p class="mono contact-side-label">0x07 · liens</p>
+          <ul class="contact-list">
+            <li><span class="mono">email</span> <a href="mailto:ton.email@example.com">ton.email@example.com</a></li>
+            <li><span class="mono">linkedin</span> <a href="#" target="_blank" rel="noopener">linkedin.com/in/tonpseudo</a></li>
+            <li><span class="mono">github</span> <a href="#" target="_blank" rel="noopener">github.com/tonpseudo</a></li>
+            <li><span class="mono">tryhackme</span> <a href="#" target="_blank" rel="noopener">tryhackme.com/p/tonpseudo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="mono">© <span id="year"></span> Ton Prénom Nom — construit avec HTML, CSS, JS &amp; PHP</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
