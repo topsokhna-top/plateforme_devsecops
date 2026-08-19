@@ -176,7 +176,7 @@ if (preg_match('/[\r\n\x00]/', $name . $email . $subject)) {
 }
 
 // --- Envoi de l'email ---
-$destinataire = 'ton.email@example.com'; // 🔧 remplace par ta vraie adresse
+$destinataire = 'topsokhna577@gmail.com'; // 🔧 remplace par ta vraie adresse
 
 $mailSubject = '[Portfolio Cyber] ' . $subject;
 
