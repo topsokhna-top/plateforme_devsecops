@@ -14,3 +14,4 @@ php/storage/ratelimit/
 *.log
 *.tmp
 *.bak
+/vendor/

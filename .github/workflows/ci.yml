@@ -11,7 +11,7 @@ on:
 jobs:
   php-syntax:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,6 +20,15 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist
+
+      - name: Audit Composer dependencies
+        run: composer audit
+
+      - name: Run PHPUnit
+        run: vendor/bin/phpunit
 
       - name: Check PHP syntax
         run: |

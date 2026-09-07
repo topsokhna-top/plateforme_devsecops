@@ -1,0 +1,13 @@
+{
+    "name": "dell/cybersecurite",
+    "require-dev": {
+        "composer": "^2.10",
+        "phpunit/phpunit": "^12.5"
+    },
+    "authors": [
+        {
+            "name": "Sokhna TOP",
+            "email": "topsokhna577@gmail.com"
+        }
+    ]
+}
