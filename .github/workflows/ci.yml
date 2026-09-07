@@ -1,35 +1,47 @@
-name: PHP Syntax Check
+name: PHP CI
 
 on:
   push:
     branches:
       - main
+
   pull_request:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
-  php-syntax:
+  php-ci:
+    name: PHP Syntax, SCA & Tests
     runs-on: ubuntu-latest
-    
+
     steps:
+      # 1. Récupérer le code
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Installer PHP 8.3
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
+          tools: composer
 
-      - name: Install Composer dependencies
-        run: composer install --no-interaction --prefer-dist
-
-      - name: Audit Composer dependencies
-        run: composer audit
-
-      - name: Run PHPUnit
-        run: vendor/bin/phpunit
-
+      # 3. Vérifier la syntaxe de tous les fichiers PHP
       - name: Check PHP syntax
         run: |
           find . -type f -name "*.php" -print0 | xargs -0 -n1 php -l
+
+      # 4. Installer les dépendances Composer
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist
+
+      # 5. Vérifier les vulnérabilités connues des dépendances
+      - name: Audit Composer dependencies
+        run: composer audit
+
+      # 6. Exécuter les tests PHPUnit
+      - name: Run PHPUnit
+        run: vendor/bin/phpunit
