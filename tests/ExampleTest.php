@@ -8,8 +8,8 @@ final class ExampleTest extends TestCase
 {
     public function testAddition(): void
     {
-        $result = 2 + 3;
+        $result = 2 + 4;
 
-        $this->assertSame(5, $result);
+        $this->assertSame(6, $result);
     }
 }
