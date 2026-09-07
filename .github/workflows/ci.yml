@@ -44,4 +44,4 @@ jobs:
 
       # 6. Exécuter les tests PHPUnit
       - name: Run PHPUnit
-        run: vendor\bin\phpunit
+        run: php vendor/bin/phpunit
